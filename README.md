@@ -24,6 +24,8 @@
 
 **Shell** zsh
 
+**Shell Theme** grml-zsh-config, powerlevel10k
+
 **AUR Helper** pikaur
 
 **Text Editors** micro, vim, code
@@ -46,8 +48,8 @@
 
 ## Installation
 
-**Dependencies (Arch, separated by spaces)** `zsh i3-gaps-rounded-git picom-ibhagwan-git python python-pip polybar-git`
+**Dependencies (Arch, separated by spaces)** `zsh i3-gaps-rounded-git picom-ibhagwan-git python python-pip polybar-git zsh-theme-powerlevel10k-git`
 
-**Optional** `alacritty kitty ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp`
+**Optional** `alacritty kitty grml-zsh-config ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp`
 
 Run `install.sh`. This will overwrite some config files.

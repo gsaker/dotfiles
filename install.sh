@@ -14,5 +14,5 @@ cp images/background "$HOME"/Pictures
 if [[ ! -d "$HOME"/.local/share/fonts ]]; then mkdir -p "$HOME"/.local/share/fonts; fi
 cp -R fonts/* "$HOME"/.local/share/fonts
 
-cp .zshrc .profile "$HOME"
+cp .zshrc .p10k.zsh .profile "$HOME"
 chmod +x "$HOME"/scripts/*
