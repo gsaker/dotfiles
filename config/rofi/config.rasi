@@ -1,0 +1,5 @@
+configuration {
+	theme: "~/.config/rofi/slate.rasi";
+	icon-theme: "Papirus";
+	show-icons: true;
+}

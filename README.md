@@ -14,16 +14,24 @@
 
 **Shell** zsh
 
+**AUR Helper** pikaur
+
 **Text Editors** micro, vim, code
 
 **Monospace Fonts** GohuFont, MesloLGS NF, Droid Sans Mono
 
 **Browser** firefox
 
+**Browser Theme** photon-australis
+
+**GTK Theme** qogir
+
 **Music Player** mpd + ncmpcpp
 
 ## Installation
 
-Run `install.sh`
+**Dependencies (Arch, separated by spaces)** `zsh i3-gaps-rounded-git picom-ibhagwan-git python python-pip polybar-git`
 
-This will overwrite some config files.
+**Optional** `alacritty kitty ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp`
+
+Run `install.sh`. This will overwrite some config files.
