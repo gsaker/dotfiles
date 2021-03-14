@@ -18,6 +18,8 @@
 
 **Bar** polybar, original theme by adi1090x (modified)
 
+**Launcher** rofi
+
 **Terminal Emulators** alacritty, kitty
 
 **Shell** zsh
