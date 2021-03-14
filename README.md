@@ -30,6 +30,8 @@
 
 **Monospace Fonts** GohuFont, MesloLGS NF, Droid Sans Mono
 
+**UI Fonts** Cantarell, Droid Sans
+
 **Browser** firefox
 
 **Browser Theme** photon-australis
@@ -37,6 +39,8 @@
 **GTK Theme** Qogir
 
 **Icon Theme** Papirus
+
+**Cursor Theme** McMojave Cursors
 
 **Music Player** mpd + ncmpcpp
 
