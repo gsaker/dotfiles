@@ -2,8 +2,6 @@
 
 [[ -f /etc/X11/xorg.conf.d/20-intel.conf.backup ]] && sudo mv /etc/X11/xorg.conf.d/20-intel.conf.backup /etc/X11/xorg.conf.d/20-intel.conf
 export HIDPI=true
+~/scripts/waitforintegrateddisplay &
 startx
 
-while [[ -z DISPLAY ]]; do sleep 1; done
-
-[[ -f /etc/X11/xorg.conf.d/20-intel.conf ]] && sudo mv /etc/X11/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf.backup
