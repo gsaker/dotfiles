@@ -1,5 +1,11 @@
 ### Dotfiles for Arch Linux
 
+## Screenshots
+
+(Primary)[images/screenshot-1.png]
+
+(Secondary)[images/screenshot-2.png]
+
 ## Details
 
 **OS** GNU/Linux
@@ -9,6 +15,8 @@
 **WM** i3-gaps-rounded
 
 **Compositor** picom-ibhagwan
+
+**Bar** polybar, original theme by adi1090x (modified)
 
 **Terminal Emulators** alacritty, kitty
 
@@ -24,7 +32,9 @@
 
 **Browser Theme** photon-australis
 
-**GTK Theme** qogir
+**GTK Theme** Qogir
+
+**Icon Theme** Papirus
 
 **Music Player** mpd + ncmpcpp
 
