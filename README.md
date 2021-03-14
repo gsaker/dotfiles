@@ -2,9 +2,9 @@
 
 ## Screenshots
 
-[Primary](images/screenshot-1.png)
+![Primary](images/screenshot-1.png)
 
-[Secondary](images/screenshot-2.png)
+![Secondary](images/screenshot-2.png)
 
 ## Details
 
