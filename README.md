@@ -48,7 +48,7 @@
 
 ## Installation
 
-**Dependencies (Arch, separated by spaces)** `zsh i3-gaps-rounded-git picom-ibhagwan-git python python-pip polybar-git zsh-theme-powerlevel10k-git`
+**Dependencies (Arch, separated by spaces)** `zsh i3-gaps-rounded-git picom-ibhagwan-git python python-pip polybar-git feh zsh-theme-powerlevel10k-git`
 
 **Optional** `alacritty kitty grml-zsh-config ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp`
 
