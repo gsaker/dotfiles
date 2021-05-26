@@ -1,4 +1,0 @@
-#!/bin/bash
-
-while [[ -z DISPLAY ]]; do sleep 1; done
-[[ -f /etc/X11/xorg.conf.d/20-intel.conf ]] && sudo mv /etc/X11/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf.backup

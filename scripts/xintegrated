@@ -1,7 +1,0 @@
-#!/bin/bash
-
-[[ -f /etc/X11/xorg.conf.d/20-intel.conf.backup ]] && sudo mv /etc/X11/xorg.conf.d/20-intel.conf.backup /etc/X11/xorg.conf.d/20-intel.conf
-export HIDPI=true
-~/scripts/waitforintegrateddisplay &
-startx
-
