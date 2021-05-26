@@ -1,0 +1,4 @@
+#define max2_width 7
+#define max2_height 4
+static unsigned char max2_bits[] = {
+   0x08, 0x1c, 0x3e, 0x7f };

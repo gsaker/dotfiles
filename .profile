@@ -1,4 +1,4 @@
-export PATH="/home/cwiggins/scripts:$PATH"
+export PATH="$HOME/scripts:$PATH"
 
 alias ll="ls -l"
 alias la="ls -al"

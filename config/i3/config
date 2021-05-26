@@ -118,6 +118,9 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -131,7 +134,6 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # media controls
-
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
@@ -139,12 +141,21 @@ bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc previous
 
+# brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# power options
+bindsym $mod+Shift+Ctrl+s exec --no-startup-id systemctl suspend
+bindsym $mod+Shift+Ctrl+p exec --no-startup-id systemctl poweroff
+bindsym $mod+Shift+Ctrl+r exec --no-startup-id systemctl reboot
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -185,6 +196,9 @@ bindsym $mod+r mode "resize"
 gaps inner 12
 gaps outer 12
 
+# ref card
+bindsym $mod+Escape exec --no-startup-id xdg-open https://i3wm.org/docs/refcard.html
+
 #
 # Window properties
 #
@@ -193,8 +207,15 @@ for_window [window_role="notification"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
-exec_always --no-startup-id xrandr --output DisplayPort-2 --primary --mode 2560x1440 --rate 144 --output eDP --mode 2880x1800 --dpi 144 --left-of DisplayPort-2
-exec_always --no-startup-id feh --bg-fill ~/Pictures/background
+exec_always --no-startup-id xrandr --output DP3 --primary --mode 2560x1440 --rate 144 --output eDP1 --mode 1920x1200 --left-of DP3
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/bg
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --backend glx
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id ~/scripts/i3-alternating-layout
+exec_always --no-startup-id autotiling
+# exec_always --no-startup-id nm-applet
+exec_always --no-startup-id lxpolkit
+# exec_always --no-startup-id light-locker --lock-on-suspend
+exec_always --no-startup-id libinput-gestures
+exec_always --no-startup-id xset 180 120
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -n ~/scripts/dim -- ~/scripts/lock --nofork
+exec_always --no-startup-id ~/scripts/redshiftlaunch

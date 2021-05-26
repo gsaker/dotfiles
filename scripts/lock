@@ -1,0 +1,70 @@
+FONT="monospace"	# Must not contain spaces
+
+i3lock \
+--blur 5 \
+--bar-indicator \
+--bar-position y+h \
+--bar-direction 1 \
+--bar-max-height 50 \
+--bar-base-width 50 \
+--bar-color 000000cc \
+--keyhlcolor 2d2d2dcc \
+--bar-periodic-step 50 \
+--bar-step 50 \
+--redraw-thread \
+--clock \
+--force-clock \
+--timepos x+5:y+h-80 \
+--timecolor c7c7c7ff \
+--datepos tx:ty+15 \
+--datecolor c7c7c7ff \
+--date-align 1 \
+--time-align 1 \
+--ringvercolor 2d2d2dcc \
+--ringwrongcolor ff008888 \
+--statuspos x+5:y+h-16 \
+--verif-align 1 \
+--wrong-align 1 \
+--verifcolor 00000000 \
+--wrongcolor ffffffff \
+--modifpos -50:-50 \
+--color 00000080 \
+--time-font $FONT \
+--date-font $FONT
+
+
+# i3lock --locktext "" \
+		# -c 00000000 \
+		# -B 5 \
+		# --ringcolor FFFFFFFF \
+		# --insidecolor 00000080 \
+		# --ringvercolor 79E7FF66 \
+		# --insidevercolor 20200080 \
+		# # --ringwrongcolor FF0000FF \
+		# --ringwrongcolor 000000FF \
+		# --insidewrongcolor 20000080 \
+		# --keyhlcolor 00FF00FF \
+		# --bshlcolor FF0000FF \
+		# --linecolor 00000000 \
+		# --separatorcolor 00000000 \
+		# --timestr "%H:%M:%S" \
+		# --datestr "%Y-%m-%d" \
+		# --timecolor FFFFFFFF \
+		# --datecolor FFFFFFFF \
+		# --noinputtext "" \
+		# --greetertext "" \
+		# --veriftext "" \
+		# --wrongtext "" \
+		# --greetercolor FFFFFFFF \
+		# --verifcolor FFFFFFFF \
+		# --wrongcolor FFFFFFFF \
+		# --color 00000080 \
+		# --indicator \
+		# --force-clock \
+		# --pass-power-keys \
+		# --pass-volume-keys \
+		# --pass-media-keys \
+		# --pass-screen-keys \
+		# --clock \
+		# --radius 100 \
+		# --ring-width 3

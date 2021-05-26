@@ -1,5 +1,5 @@
 configuration {
-	theme: "~/.config/rofi/slate.rasi";
+	theme: "~/.config/rofi/launcher.rasi";
 	icon-theme: "Papirus";
 	show-icons: true;
 }

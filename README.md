@@ -12,7 +12,7 @@
 
 **Distro** Arch Linux
 
-**WM** i3-gaps-rounded
+**WM** i3-gaps
 
 **Compositor** picom-ibhagwan
 
@@ -32,13 +32,13 @@
 
 **Monospace Fonts** GohuFont, MesloLGS NF, Droid Sans Mono
 
-**UI Fonts** Cantarell, Droid Sans
+**UI Fonts** Droid Sans 11pt
 
 **Browser** firefox
 
-**Browser Theme** photon-australis
+**Browser Theme** MaterialFox
 
-**GTK Theme** Qogir
+**GTK Theme** ChromeOS-light-compact
 
 **Icon Theme** Papirus
 
@@ -48,8 +48,10 @@
 
 ## Installation
 
-**Dependencies (Arch, separated by spaces)** `zsh i3-gaps-rounded-git picom-ibhagwan-git python python-pip polybar-git rofi feh zsh-theme-powerlevel10k-git`
+**Dependencies (pacman/AUR, separated by spaces)** `zsh i3-gaps picom-ibhagwan-git polybar-git rofi feh autotiling`
 
-**Optional** `alacritty kitty grml-zsh-config ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp redshift`
+**Optional** `alacritty kitty grml-zsh-config ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp zsh-theme-powerlevel10k-git redshift xorg-xset xss-lock`
 
-Run `install.sh`. This will overwrite some config files.
+**Other tools and packages used** `lxappearance lxpolkit libinput-gestures xorg-xrandr pulseaudio network-manager`
+
+If you accept that configs will be overwritten, run `install.sh` to install the configuration files.
