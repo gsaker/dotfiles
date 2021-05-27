@@ -48,10 +48,18 @@
 
 ## Installation
 
-**Dependencies (pacman/AUR, separated by spaces)** `zsh i3-gaps picom-ibhagwan-git polybar-git rofi feh autotiling`
+All packages are listed assuming use of the main Arch Linux repos and Arch User Repository (AUR)
 
-**Optional** `alacritty kitty grml-zsh-config ttf-droid code firefox pikaur micro vim mpd mpc ncmpcpp zsh-theme-powerlevel10k-git redshift xorg-xset xss-lock`
+**Dependencies**
 
-**Other tools and packages used** `lxappearance lxpolkit libinput-gestures xorg-xrandr pulseaudio network-manager`
+`bash i3-gaps rofi picom-ibhagwan-git polybar-git feh`
 
-If you accept that configs will be overwritten, run `install.sh` to install the configuration files.
+**Recommended packages**
+
+`pikaur zsh autotiling alacritty kitty ttf-droid grml-zsh-config lxappearance firefox vim micro xorg-xset xss-lock i3lock-color-git redshift zsh-theme-powerlevel10k-git`
+
+**Other packages, including programs and tools used**
+
+`lxpolkit libinput-gestures xorg-xrandr code mpd mpc ncmpcpp pulseaudio network-manager`
+
+Keeping in mind that configurations will be overwritten, run `./install.sh` to install the configuration files.

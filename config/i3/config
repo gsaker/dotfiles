@@ -190,32 +190,29 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-#
-# Gaps
-#
+# gaps
 gaps inner 12
 gaps outer 12
 
 # ref card
 bindsym $mod+Escape exec --no-startup-id xdg-open https://i3wm.org/docs/refcard.html
 
-#
-# Window properties
-#
+# window properties
 for_window [class=".*"] border none
 for_window [window_role="notification"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
-exec_always --no-startup-id xrandr --output DP3 --primary --mode 2560x1440 --rate 144 --output eDP1 --mode 1920x1200 --left-of DP3
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/bg
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf --backend glx
+# autostart
+exec_always --no-startup-id display-setup
+
+exec_always --no-startup-id ~/.config/picom/launch.sh
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.fehbg
+
 exec_always --no-startup-id autotiling
-# exec_always --no-startup-id nm-applet
 exec_always --no-startup-id lxpolkit
-# exec_always --no-startup-id light-locker --lock-on-suspend
 exec_always --no-startup-id libinput-gestures
-exec_always --no-startup-id xset 180 120
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -n ~/scripts/dim -- ~/scripts/lock --nofork
-exec_always --no-startup-id ~/scripts/redshiftlaunch
+
+exec_always --no-startup-id enable-lock
+exec_always --no-startup-id redshift-startup

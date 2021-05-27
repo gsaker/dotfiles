@@ -1,0 +1,11 @@
+#!/bin/bash
+
+usage="usage: $(basename $0) <options> <path to background>
+options:
+  -h	Show usage"
+
+if [[ -e "$1" ]]; then
+	feh --bg-fill "$1"
+else
+	echo -e "$usage"
+fi

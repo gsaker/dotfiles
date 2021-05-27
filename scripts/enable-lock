@@ -1,0 +1,2 @@
+xset 180 120
+xss-lock --transfer-sleep-lock -n ~/scripts/dim -- ~/scripts/lock --nofork

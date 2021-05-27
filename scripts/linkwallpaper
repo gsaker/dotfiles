@@ -1,3 +1,0 @@
-#!/bin/sh
-ln -sf "$(pwd)/$1" ~/Pictures/Wallpaper/bg
-feh --bg-fill ~/Pictures/Wallpaper/bg
