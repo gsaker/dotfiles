@@ -52,7 +52,7 @@ All packages are listed assuming use of the main Arch Linux repos and Arch User 
 
 **Dependencies**
 
-`bash i3-gaps rofi picom-ibhagwan-git polybar-git feh`
+`bash i3-gaps rofi picom-ibhagwan-git polybar-git fontconfig feh`
 
 **Recommended packages**
 
