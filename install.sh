@@ -1,5 +1,6 @@
 #!/bin/bash
 
+desktoptheme="https://github.com/vinceliuice/ChromeOS-theme"
 materialfox="https://github.com/muckSponge/MaterialFox"
 
 copy() {
@@ -15,9 +16,6 @@ copy() {
 	if [[ ! -d "$HOME"/.local/share/fonts ]]; then mkdir -p "$HOME"/.local/share/fonts; fi
 	cp -R fonts/* "$HOME"/.local/share/fonts
 
-	if [[ ! -d "$HOME"/.themes ]]; then mkdir -p "$HOME"/.themes; fi
-	cp -R themes/* "$HOME"/.themes
-
 	cp .zshrc .bashrc .profile .p10k.zsh "$HOME"
 	chmod +x "$HOME"/scripts/*
 }
@@ -25,6 +23,22 @@ copy() {
 postInstall() {
 	scripts/setbg "$HOME"/Pictures/Wallpapers/default
 	fc-cache -f
+}
+
+installThemes() {
+	root_dir=$(pwd)
+	
+	git clone "$desktoptheme" ./desktop-theme
+	if [[ -d ./desktop-theme ]]; then
+		cd ./desktop-theme
+		./install.sh
+		
+		cd "$root_dir"
+		rm -rf ./desktop-theme
+	fi
+
+	if [[ ! -d "$HOME"/.themes ]]; then mkdir -p "$HOME"/.themes; fi
+	cp -R themes/* "$HOME"/.themes
 }
 
 firefoxConfig() {
@@ -70,7 +84,16 @@ run() {
 	copy
 	postInstall
 
-	echo "Install the MaterialFox theme by muckSponge and smooth scrolling config for Firefox?"
+	printf "\nWould you like to install the desktop themes (GTK+, etc.)?\n"
+	echo "This requires the GTK Murrine engine for your distro (gtk-engine-murrine for Arch)."
+	printf "Proceed? (y/N) "
+	read res
+	if [[ "$res" == "y" ]]; then
+		echo "Installing desktop themes..."
+		installThemes
+	fi
+
+	printf "\nInstall the MaterialFox theme by muckSponge and smooth scrolling config for Firefox?\n"
 	echo "Note: This will overwrite the Firefox \"user.js\" and \"chrome\" directory files."
 	printf "Proceed? (y/N) "
 	read res
@@ -79,12 +102,12 @@ run() {
 		firefoxConfig
 	fi
 
-	echo "Installed dotfiles. Run \`setbg <path to image>\` to change your desktop background."
+	printf "\nInstalled dotfiles. Run \`setbg <path to image>\` to change your desktop background.\n"
 	echo "You may now use a tool such as lxappearance to customise GTK and other theming options"
 }
 
-echo "Make sure that you have read the readme and installed the required dependencies."
-echo "This will overwrite various configuration files. Don't proceed if you have any configurations that you have not backed up."
+echo "Make sure that you have read the readme and installed the required dependencies. This script should only be run from the repository root."
+echo "This will also overwrite various configuration files, so please don't proceed if you have any configurations that you have not backed up."
 printf "Proceed? (y/N) "
 read res
 if [[ "$res" == "y" ]]; then
